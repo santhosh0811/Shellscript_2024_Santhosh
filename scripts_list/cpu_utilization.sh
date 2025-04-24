@@ -1,4 +1,4 @@
-#1/bin/bash
+#!/bin/bash
 
 set -x
 ideal_cpu=mpstat 1 1 | grep -v '^$' | awk -F " " 'NR==4 {print $NF}' | cut -d "." -f1
